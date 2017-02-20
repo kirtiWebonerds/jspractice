@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<form method="POST">
+	<input type="text" name="name" id="name">
+	<input type="text" name="add" id="add">
+	<input type="email" name="email" id="email">
+	<input type="button" name="submit" value="Submit" onclick="validate()">
+	<input type="text" name="sname" id="sname">
+	<p id="pr"></p>
+	</form>
+</div>
+<script type="text/javascript">
+	function validate()
+	{
+		var name= document.getElementById("name").value;
+		var add = document.getElementById("add").value;
+		var email = document.getElementById("email").value;
+
+		console.log(name);
+		console.log(add);
+		console.log(email);
+		document.getElementById("sname").value =name;
+		document.getElementById("pr").innerHTML = name;
+	}
+</script>
+</body>
+</html>

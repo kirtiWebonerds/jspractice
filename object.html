@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<p id="demo"></p>
+	<div id="details"></div>
+</div>
+<script type="text/javascript">
+	var person= {"firstName":"Kirti", "lastName":"Kulkarni",
+					"address":"Satara","age":23,
+					fullName: function()
+					{
+						return this.firstName + " " + this.lastName;
+					}
+				};
+
+ document.getElementById("demo").innerHTML = person.fullName();
+	document.getElementById("details").innerHTML = "First Name :" + person.firstName+ " " + "Last Name :" + person.lastName + " " + "Address:" +" " +person.address + " " + "Age :" + " " + person.age;
+</script>
+</body>
+</html>

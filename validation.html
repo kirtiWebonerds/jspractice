@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<form method="POST">
+		<div>
+			<input type="text" name="" id="name" placeholder="Name">
+			<div><span id="err-msg"></span></div>
+		</div>
+		<div>
+			<input type="email" name="" id="email" placeholder="Email">
+			<span id="err"></span>
+		</div>
+		<div>
+			<input type="button" name="submit" value="Submit" onClick="validate()">
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	function validate()
+	{
+		var name= document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		if(name ==null||name == '')
+		{
+			// document.getElementById("err-msg").innerHTML="Name is Required";
+			var error ="<span style='color:red;'>Name is Required</span>";
+			document.getElementById("err-msg").innerHTML= error;
+		}
+		if(email ==null||email == '')
+		{
+			// document.getElementById("err-msg").innerHTML="Name is Required";
+			var error ="<span style='color:red;'>Email is Required</span>";
+			document.getElementById("err").innerHTML= error;
+		}
+	}
+</script>
+</body>
+</html>
